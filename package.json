@@ -1,0 +1,30 @@
+{
+  "name": "mayweather",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/theshaune/mayweather.git",
+    "type": "git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "3.0.6",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "recompose": "^0.25.0",
+    "styled-components": "^2.1.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-styled-components": "^1.1.7",
+    "eslint": "^4.5.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-react": "^7.2.1"
+  },
+  "author": "shaune <hello@cereal.co>",
+  "license": "MIT"
+}
