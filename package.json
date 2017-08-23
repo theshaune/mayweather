@@ -7,12 +7,14 @@
     "type": "git"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "lodash": "^4.17.4",
     "next": "3.0.6",
+    "next-routes": "^1.0.40",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "recompose": "^0.25.0",

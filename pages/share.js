@@ -8,8 +8,6 @@ import {
 import Router from 'next/router'
 import { generateMeme, parseMeme } from '../lib/data'
 import AppBody from '../components/AppBody'
-import AppFooter from '../components/AppFooter'
-import AppHeader from '../components/AppHeader'
 import AppWrapper from '../components/AppWrapper'
 import Button from '../components/Button'
 import Home from '../components/Home'
@@ -52,36 +50,19 @@ const enhance = compose(
 
 const Index = ({ asPath, memes, route, home, ...props }) =>
   <AppWrapper>
-    <AppHeader>
-      <Button onClick={route({ url: '/' })} hidden={asPath === '/'} nude>
-        Go Home
-      </Button>
-    </AppHeader>
-
     <AppBody>
-      <Page meme={{ url: '/' }} activeMeme={{ url: asPath }}>
-        <Home />
+      <Page meme={{ url: '/' }} activeMeme={{ url: asPath }} instant>
+        <Home instant />
       </Page>
       {asPath !== '/' &&
         memes.map(
           o =>
             o &&
-            <Page key={o.url} id={o.url} meme={o} activeMeme={memes[0]}>
-              <Meme meme={o} />
+            <Page key={o.url} id={o.url} meme={o} activeMeme={memes[0]} instant>
+              <Meme meme={o} instant />
             </Page>
         )}
     </AppBody>
-
-    <AppFooter>
-      <Button
-        onClick={route(generateMeme())}
-        style={{ marginBottom: '1rem' }}
-        primary
-      >
-        Talk Smack
-      </Button>
-      <Share meme={memes[0] ? memes[0] : '/'} url={asPath} />
-    </AppFooter>
   </AppWrapper>
 
 const EhancedIndex = enhance(Index)
