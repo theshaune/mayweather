@@ -54,7 +54,11 @@ export default class MyDocument extends Document {
         <Head>
           <title>Smack Talk Generator</title>
           <link rel="icon" type="image/png" href="/static/favicon.png" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"
+          />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta property="og:site_name" content="👊 The Smack Talk Generator" />
           <meta property="og:title" content="👊 The Smack Talk Generator" />
           <meta property="og:url" content="https://thesmacktalkgenerator.com" />
