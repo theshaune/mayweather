@@ -50,7 +50,7 @@ const Page = ({ activeMeme, meme, key, children, mounted }) =>
     activeMeme={activeMeme}
     children={children}
     mounted={mounted}
-    id={key}
+    key={key}
   />
 
 export default enhance(Page)

@@ -70,13 +70,7 @@ const Index = ({ asPath, memes, route, home, ...props }) =>
           memes.map(
             o =>
               o &&
-              <Page
-                key={o.url}
-                id={o.url}
-                meme={o}
-                activeMeme={memes[0]}
-                url={asPath}
-              >
+              <Page key={o.url} meme={o} activeMeme={memes[0]} url={asPath}>
                 <Meme meme={o} />
               </Page>
           )}
