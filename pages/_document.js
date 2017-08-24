@@ -19,9 +19,13 @@ injectGlobal`
   }
 
   html{
-    font-size: 14px;
+    font-size: 12px;
     height: 100%;
-    overflow-y: hidden;
+    overflow: hidden;
+
+    @media (min-width: 420px) {
+      font-size: 14px;
+    }
   }
 
   body {
@@ -30,12 +34,13 @@ injectGlobal`
     box-shadow: inset 0px 0px 0px 3px #ff0000;
     color: rgb(58, 58, 58);
     font-family: 'Anonymous Pro', monospace;
-    font-size: 14px;
+    font-size: 100%;
     font-weight: 400;
     font-style: normal;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    
     -webkit-font-smoothing: antialiased;
   }
 

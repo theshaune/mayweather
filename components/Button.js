@@ -23,6 +23,7 @@ const isNude = css`
 
 const isHidden = css`
   opacity: 0;
+  pointer-events: none;
 `
 
 // Component
