@@ -1,10 +1,4 @@
-import {
-  compose,
-  withProps,
-  withState,
-  withPropsOnChange,
-  withHandlers
-} from 'recompose'
+import { compose, withState, withPropsOnChange, withHandlers } from 'recompose'
 import Router from 'next/router'
 import { generateMeme, parseMeme } from '../lib/data'
 import App from '../components/App'
