@@ -49,7 +49,7 @@ const Title = styled.span`
 
 export default ({ meme, url }) =>
   <Wrapper>
-    <Title>Brought to you by:</Title>
+    <Title>Brought to you by</Title>
     <Link href={`https://instagram.com/hennersmate`}>@hennersmate</Link>
     <Seperator />
     <Link href={`https://instagram.com/slick_owens`}>@slick_owens</Link>
