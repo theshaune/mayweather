@@ -20,9 +20,12 @@ injectGlobal`
 
   html{
     font-size: 14px;
+    height: 100%;
+    overflow-y: hidden;
   }
 
   body {
+    min-height: 100%;
     background-color: rgb(241, 241, 238);
     box-shadow: inset 0px 0px 0px 3px #ff0000;
     color: rgb(58, 58, 58);
@@ -49,7 +52,8 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>👊 The Smack Talk Generator</title>
+          <title>Smack Talk Generator</title>
+          <link rel="icon" type="image/png" href="/static/favicon.png" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta property="og:site_name" content="👊 The Smack Talk Generator" />
           <meta property="og:title" content="👊 The Smack Talk Generator" />
