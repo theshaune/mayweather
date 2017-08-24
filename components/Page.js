@@ -50,7 +50,6 @@ const Page = ({ activeMeme, meme, key, children, mounted }) =>
     activeMeme={activeMeme}
     children={children}
     mounted={mounted}
-    key={key}
     id={key}
   />
 

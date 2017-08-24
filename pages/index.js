@@ -22,7 +22,9 @@ import Share from '../components/Share'
 const enhance = compose(
   withState('memes', 'setMemes', []),
   withPropsOnChange(['meme'], props => {
-    props.setMemes([props.meme, ...props.memes.splice(0, 1)])
+    props.setMemes(
+      props.meme ? [props.meme, ...props.memes].splice(0, 2) : props.memes
+    )
   }),
   withHandlers({
     changeRoutes: props => event => {},
@@ -35,8 +37,6 @@ const enhance = compose(
         { shallow: false }
       ),
     route: props => nextRoute => event => {
-      // This duplicate could be handled better.
-      props.setMemes([props.meme, ...props.memes.splice(0, 1)])
       Router.push(
         {
           pathname: '/',
@@ -66,6 +66,7 @@ const Index = ({ asPath, memes, route, home, ...props }) =>
           <Home />
         </Page>
         {asPath !== '/' &&
+          memes &&
           memes.map(
             o =>
               o &&
