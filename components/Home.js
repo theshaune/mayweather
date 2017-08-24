@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   opacity: 0;
-  padding: 0 2rem;
+  padding: 0 1rem;
   transition: 2s;
 
   ${props =>
