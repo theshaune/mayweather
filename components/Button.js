@@ -33,6 +33,7 @@ export const Button = styled.button`
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
+  font-family: 'Anonymous Pro', monospace;
   Justify-content: center;
   padding: 1rem 2rem;
   outline: none;
