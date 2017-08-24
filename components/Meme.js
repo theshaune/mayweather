@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { withState, lifecycle, compose } from 'recompose'
 import Fighter from './Fighter'
-
+import Share from '../components/Share'
 const enhance = compose(
   withState('isMounted', 'setMounted', ({ instant }) => instant),
   lifecycle({
@@ -43,8 +43,7 @@ const Image = styled.div`
 
 const Title = styled.div`
   font-family: 'Oswald', sans-serif;
-  font-size: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1;
@@ -57,7 +56,7 @@ const Title = styled.div`
   }
 `
 
-const Meme = ({ activePage, meme, isMounted }) =>
+const Meme = ({ asPath, activePage, meme, isMounted }) =>
   <Wrapper meme={meme} activePage={activePage} isMounted={isMounted}>
     <Image>
       <Fighter image={meme.raw.image} />
@@ -65,6 +64,7 @@ const Meme = ({ activePage, meme, isMounted }) =>
     <Title>
       “{meme.sentence}”
     </Title>
+    <Share meme={meme} url={asPath} />
   </Wrapper>
 
 export default enhance(Meme)

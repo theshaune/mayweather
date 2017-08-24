@@ -13,6 +13,7 @@ import AppFooter from '../components/AppFooter'
 import AppHeader from '../components/AppHeader'
 import AppWrapper from '../components/AppWrapper'
 import Button from '../components/Button'
+import Handles from '../components/Handles'
 import Home from '../components/Home'
 import Meme from '../components/Meme'
 import Page from '../components/Page'
@@ -68,7 +69,13 @@ const Index = ({ asPath, memes, route, home, ...props }) =>
           memes.map(
             o =>
               o &&
-              <Page key={o.url} id={o.url} meme={o} activeMeme={memes[0]}>
+              <Page
+                key={o.url}
+                id={o.url}
+                meme={o}
+                activeMeme={memes[0]}
+                url={asPath}
+              >
                 <Meme meme={o} />
               </Page>
           )}
@@ -82,7 +89,8 @@ const Index = ({ asPath, memes, route, home, ...props }) =>
         >
           Talk Smack
         </Button>
-        <Share meme={memes[0] ? memes[0] : '/'} url={asPath} />
+
+        <Handles />
       </AppFooter>
     </AppWrapper>
   </App>
