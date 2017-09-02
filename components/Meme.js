@@ -10,7 +10,6 @@ const enhance = compose(
     componentDidMount() {
       // 😖 This delay allows our animation to trigger on mount
       setTimeout(() => this.props.setMounted(true), 50)
-      this.forceUpdate()
     }
   })
 )
