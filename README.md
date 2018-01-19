@@ -1,9 +1,9 @@
-# mayweather
+# Smack Talk Generator
 
-This project was a collobaration of @HENNERSMATE, @SLICK_OWENS and myself.
+This project was a collaboration between @HENNERSMATE, @SLICK_OWENS and I.
 My role was the developer.
 
-[live](https://smacktalkgenerator.com/)
+[live website](https://smacktalkgenerator.com/)
 
 
 ## Installation
@@ -13,4 +13,4 @@ yarn
 yarn dev
 ```
 
-**Disclaimer:** This repository uses a series of pre-defined Enlish words to create a sentence of the tone of boxing champians, some of the words may be lightly-offensive.
+**Disclaimer:** This repository uses a series of pre-defined Enlish words to create a sentence of "smack talk", some of the words & sentences may be **lightly-offensive**.
